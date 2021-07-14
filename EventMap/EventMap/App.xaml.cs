@@ -1,4 +1,5 @@
 ﻿using System;
+using EventMap.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace EventMap
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MapPage();
         }
 
         protected override void OnStart()
