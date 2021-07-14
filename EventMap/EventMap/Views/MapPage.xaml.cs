@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using EventMap.Extensions;
+using EventMap.Services;
+using Xamarin.Forms;
 
 namespace EventMap.Views
 {
@@ -7,6 +10,13 @@ namespace EventMap.Views
         public MapPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Service<LocationService>.Instance.LoadCurrentLocation(MainMap.MoveToLocation);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using EventMap.Services;
 using EventMap.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +13,8 @@ namespace EventMap
         public App()
         {
             InitializeComponent();
+            
+            ServicesRegistrator.RegisterServices(false);
 
             MainPage = new MapPage();
         }
