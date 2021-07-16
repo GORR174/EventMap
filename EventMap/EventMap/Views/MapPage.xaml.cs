@@ -37,6 +37,7 @@ namespace EventMap.Views
             pinModels.Select(model => new CustomPin
             {
                 Label = model.Title,
+                PinModel = model,
                 Position = new Position(model.Latitude, model.Longitude),
             }).ForEach(MainMap.AddPin);
         }

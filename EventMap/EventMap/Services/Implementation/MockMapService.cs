@@ -15,13 +15,15 @@ namespace EventMap.Services.Implementation
                 {
                     Id = 0,
                     Title = "Парад уток",
+                    Date = "24.07.2021 в 21:00",
                     Latitude = 56.8483669,
                     Longitude = 60.6508908,
                 },
                 new PinDTO
                 {
-                    Id = 0,
-                    Title = "Парад утокafsa",
+                    Id = 1,
+                    Title = "Праздник мандарина",
+                    Date = "05.08.2021 весь день",
                     Latitude = 55.8483669,
                     Longitude = 61.6508908,
                 },
@@ -31,6 +33,7 @@ namespace EventMap.Services.Implementation
                 .Select(dto => new PinModel(dto)
                 {
                     Title = dto.Title,
+                    Date = dto.Date,
                     Latitude = dto.Latitude,
                     Longitude = dto.Longitude,
                 })
