@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:EventMap"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:customElements="clr-namespace:EventMap.CustomElements;assembly=EventMap"
              x:Class="EventMap.Views.MapPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <!-- <Label Text="Welcome to Xamarin.Forms!"  -->
-        <!--    HorizontalOptions="Center" -->
-        <!--    VerticalOptions="CenterAndExpand" /> -->
-        
-        <maps:Map x:Name="MainMap" IsShowingUser="True" />
+        <customElements:CustomMap x:Name="MainMap" IsShowingUser="True" />
         
         <Frame BackgroundColor="Chocolate" Padding="0" HeightRequest="60" >
             <Label Text="Test" HorizontalTextAlignment="Center" FontSize="36" TextColor="White" />

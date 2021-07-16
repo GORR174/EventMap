@@ -5,7 +5,7 @@ using Xamarin.Essentials;
 
 namespace EventMap.Services
 {
-    public class LocationService : IService
+    public class LocationService
     {
         public async void LoadCurrentLocation(Action<Location> onLoad)
         {

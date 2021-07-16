@@ -1,6 +1,6 @@
 namespace EventMap.Services
 {
-    public class Service<T> where T: IService
+    public class Service<T>
     {
         public static T Instance { get; private set; }
         

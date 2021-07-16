@@ -58,6 +58,7 @@
         <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2083" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CustomMapRenderer.cs" />
         <Compile Include="MainActivity.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
