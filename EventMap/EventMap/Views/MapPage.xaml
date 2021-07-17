@@ -5,11 +5,20 @@
              x:Class="EventMap.Views.MapPage">
 
     <StackLayout>
-        <customElements:CustomMap x:Name="MainMap" IsShowingUser="True" />
         
-        <Frame BackgroundColor="Chocolate" Padding="0" HeightRequest="60" >
-            <Label Text="Test" HorizontalTextAlignment="Center" FontSize="36" TextColor="White" />
-        </Frame>
+        
+        <Grid VerticalOptions="FillAndExpand">
+            <customElements:CustomMap VerticalOptions="FillAndExpand" x:Name="MainMap" IsShowingUser="True" />
+            <Frame VerticalOptions="End" BackgroundColor="#fcd764" Padding="0" HeightRequest="60" MinimumHeightRequest="60">
+                <!-- <Label Text="Test" HorizontalTextAlignment="Center" FontSize="36" TextColor="White" /> -->
+            </Frame>
+            <!-- <Label Text="Test" VerticalOptions="End" HorizontalTextAlignment="End" FontSize="36" TextColor="Black" Margin="0, 0, 0, 30" /> -->
+            <ImageButton Source="FAB.png" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="90" Margin="0, 0, 0, 12"
+                         VerticalOptions="End" 
+                         HorizontalOptions="Center" 
+                         AbsoluteLayout.LayoutFlags="PositionProportional"  
+                         AbsoluteLayout.LayoutBounds=".95,.95,80,80" ></ImageButton>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
