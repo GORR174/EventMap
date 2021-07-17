@@ -68,7 +68,7 @@ namespace EventMap.Android
                 var infoDate = view.FindViewById<TextView>(Resource.Id.InfoWindowDate);
 
                 infoTitle.Text = marker.Title;
-                infoDate.Text = customPins.Where((pin => pin.Label == marker.Title)).First().PinModel.Date;
+                infoDate.Text = customPins.First(pin => pin.Label == marker.Title).PinModel.Date;
 
                 return view;
             }
@@ -83,7 +83,9 @@ namespace EventMap.Android
         
         private void OnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
         {
-            
+            var pin = customPins.First(pin => pin.Label == e.Marker.Title);
+
+            pin.OnClick(pin.PinModel);
         }
     }
 }

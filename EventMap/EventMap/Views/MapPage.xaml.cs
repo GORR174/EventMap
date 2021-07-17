@@ -20,6 +20,8 @@ namespace EventMap.Views
         {
             InitializeComponent();
             
+            NavigationPage.SetHasNavigationBar(this, false);
+            
             BindingContext = mapVm;
         }
 
@@ -39,6 +41,7 @@ namespace EventMap.Views
                 Label = model.Title,
                 PinModel = model,
                 Position = new Position(model.Latitude, model.Longitude),
+                OnClick = pinModel => Navigation.PushAsync(new EventItemPage(pinModel.Dto))
             }).ForEach(MainMap.AddPin);
         }
     }

@@ -1,3 +1,4 @@
+using EventMap.DTOs;
 using EventMap.Services.Implementation;
 
 namespace EventMap.Services
@@ -8,6 +9,7 @@ namespace EventMap.Services
         {
             Service<LocationService>.RegisterService(new LocationService());
             Service<IMapService>.RegisterService(new MockMapService());
+            Service<IEventsService>.RegisterService(new MockEventsService());
         }
     }
 }

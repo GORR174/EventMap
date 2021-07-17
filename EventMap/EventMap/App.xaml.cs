@@ -16,7 +16,7 @@ namespace EventMap
             
             ServicesRegistrator.RegisterServices(false);
 
-            MainPage = new MapPage();
+            MainPage = new NavigationPage(new MapPage());
         }
 
         protected override void OnStart()
