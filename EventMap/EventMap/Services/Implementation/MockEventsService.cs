@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using EventMap.DTOs;
 using EventMap.Models;
+using Xamarin.Essentials;
 
 namespace EventMap.Services.Implementation
 {
@@ -36,6 +37,31 @@ namespace EventMap.Services.Implementation
             await Task.Delay(2000);
             
             var dto = dtos[eventId];
+
+            return new EventModel(dto)
+            {
+                Title = dto.Title,
+                Date = dto.Date,
+                Description = dto.Description
+            };
+        }
+
+        public async Task<EventModel> CreateEvent(string name, string description, string date, Location location)
+        {
+            await Task.Delay(1000);
+            
+            var id = dtos.Count;
+            dtos.Add(id, new EventDTO
+            {
+                Date = date,
+                Description = description,
+                Title = name,
+                Id = id
+            });
+            
+            var dto = dtos[id];
+
+            Service<IMapService>.Instance.CreatePin(location, name, date);
 
             return new EventModel(dto)
             {

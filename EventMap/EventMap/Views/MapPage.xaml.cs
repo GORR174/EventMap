@@ -28,11 +28,19 @@ namespace EventMap.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            CreateEventButton.Clicked += OnCreateButtonClicked;
             
             mapVm.LoadPins(LoadPinsFromList);
 
             Service<LocationService>.Instance.LoadCurrentLocation(MainMap.MoveToLocation);
         }
+
+        private void OnCreateButtonClicked(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new CreateEventPage());
+            CreateEventButton.Clicked -= OnCreateButtonClicked;
+        } 
 
         private void LoadPinsFromList(List<PinModel> pinModels)
         {

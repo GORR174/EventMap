@@ -16,6 +16,7 @@
             <ImageButton Source="FAB.png" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="90" Margin="0, 0, 0, 12"
                          VerticalOptions="End" 
                          HorizontalOptions="Center" 
+                         x:Name="CreateEventButton"
                          AbsoluteLayout.LayoutFlags="PositionProportional"  
                          AbsoluteLayout.LayoutBounds=".95,.95,80,80" ></ImageButton>
         </Grid>

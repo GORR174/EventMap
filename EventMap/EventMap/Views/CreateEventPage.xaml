@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Создать событие"
+             x:Class="EventMap.Views.CreateEventPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator 
+                x:Name="ProgressBar"
+                IsRunning="True"
+                WidthRequest="90"
+                HeightRequest="90"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Название"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" 
+                   Margin="16, 16, 16, 0"
+                   x:Name="Name" />
+            <Editor Margin="16, 0, 16, 0" x:Name="NameInput"/>
+            <Label Text="Описание"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" 
+                   Padding="16, 8, 16, 0"
+                   x:Name="Description" />
+            <Editor Margin="16, 0, 16, 0" AutoSize="TextChanges" x:Name="DescriptionInput"/>
+            <Label Text="Дата"
+                   VerticalOptions="Start"
+                   Padding="16, 8, 16, 0"
+                   HorizontalOptions="Start" 
+                   x:Name="Date" />
+            <Editor Margin="16, 0, 16, 0" x:Name="DateInput"/>
+            
+            <Button HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    Margin="0, 0, 0, 16"
+                    WidthRequest="128"
+                    x:Name="CreateButton"
+                    Text="Создать" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
